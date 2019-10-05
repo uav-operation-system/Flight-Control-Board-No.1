@@ -1,0 +1,14 @@
+PIDµ÷²Î
+	mydata1[0]=GYRO_TO_DEG(gyrox);
+	mydata1[1]=PidInerRoll.out;
+	mydata1[2]=roll;
+	mydata1[3]=PidOuterRoll.out;
+	mydata1[4]=TIM3->CCR1;
+	mydata1[5]=TIM3->CCR2;
+Êä³ö²âÊÔ
+	mydata1[0]=TIM3->CCR1;
+	mydata1[1]=TIM3->CCR2;
+	mydata1[2]=TIM3->CCR3;
+	mydata1[3]=TIM3->CCR4;
+	mydata1[4]=TIM4->CCR1;
+	mydata1[5]=TIM4->CCR2;
