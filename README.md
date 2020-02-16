@@ -4,7 +4,7 @@
 
 天地飞接收机的7个通道分别插入飞控板上标有21 22 23 24 81 82 83的通道，31 32 33 34 41 42 43 44为8个输出通道。
 
-![](file:///C:/Users/mynam/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg)
+![image](https://github.com/uav-operation-system/Flight-Control-Board-No.1/raw/master/Board.png)
 
 除个别机型的说明外，方向如图所示放置。
 
