@@ -195,15 +195,10 @@ AD0引脚在模块内部下拉，地址默认0x68不用改。只连4个引脚即
 
     ```javascript
 	mydata1[0]=GYRO_TO_DEG(gyrox);
-
 	mydata1[1]=PidInerRoll.out;
-
 	mydata1[2]=roll;
-
 	mydata1[3]=PidOuterRoll.out;
-
 	mydata1[4]=TIM3->CCR1;
-
 	mydata1[5]=TIM3->CCR2;
     ```
 
@@ -211,17 +206,11 @@ AD0引脚在模块内部下拉，地址默认0x68不用改。只连4个引脚即
 
     ```javascript
 	mydata1[0]=TIM3->CCR1;
-
 	mydata1[1]=TIM3->CCR2;
-
 	mydata1[2]=TIM3->CCR3;
-
 	mydata1[3]=TIM3->CCR4;
-
 	mydata1[4]=TIM4->CCR1;
-
 	mydata1[5]=TIM4->CCR2;
-	
     ```
 
 # 西电航协研发部Github组织库规范
