@@ -91,12 +91,11 @@ PID参数有待优化。
 
 **3.** **卡尔曼滤波**
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
 矢量状态—标量观测卡尔曼滤波
 
 状态方程：
 
+![](http://chart.googleapis.com/chart?cht=tx&chl=
 $$\begin{aligned}
 &\left[\begin{array}{c}
 x[n] \\
@@ -113,7 +112,7 @@ T \\
 \end{array}\right] g[n]\\
 &\mathbf{s}[\mathbf{n}] \quad \mathbf{A} \quad \mathbf{s}[\mathbf{n}-1]\\
 &\mathbf{B}
-\end{aligned}$$
+\end{aligned}$$)
 
 观测方程：
 
