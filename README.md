@@ -91,6 +91,8 @@ PID参数有待优化。
 
 **3.** **卡尔曼滤波**
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 矢量状态—标量观测卡尔曼滤波
 
 状态方程：
