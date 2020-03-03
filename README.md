@@ -91,6 +91,13 @@ PID参数有待优化。
 
 **3.** **卡尔曼滤波**
 
+注意：Github默认不显示LaTex公式
+
+需要另装数学公式插件：MathJax Plugin for Github
+
+地址：[https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima/related?utm_source=chrome-app-launcher-info-dialog]
+(https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima/related?utm_source=chrome-app-launcher-info-dialog)
+
 矢量状态—标量观测卡尔曼滤波
 
 状态方程：
