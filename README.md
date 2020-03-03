@@ -95,35 +95,50 @@ PID参数有待优化。
 
 状态方程：
 
-![](file:///C:/Users/mynam/AppData/Local/Temp/msohtmlclip1/01/clip_image004.gif)
-
- **s**\[n\] **A** **s**\[n-1\] **B** **u**
+$$\begin{aligned}
+&\left[\begin{array}{c}
+x[n] \\
+b[n]
+\end{array}\right]=\left[\begin{array}{cc}
+1 & -T \\
+0 & 1
+\end{array}\right]\left[\begin{array}{c}
+x[n-1] \\
+b[n-1]
+\end{array}\right]+\left[\begin{array}{c}
+T \\
+0
+\end{array}\right] g[n]\\
+&\mathbf{s}[\mathbf{n}] \quad \mathbf{A} \quad \mathbf{s}[\mathbf{n}-1]\\
+&\mathbf{B}
+\end{aligned}$$
 
 观测方程：
 
-![](file:///C:/Users/mynam/AppData/Local/Temp/msohtmlclip1/01/clip_image006.gif)
-
-x ![](file:///C:/Users/mynam/AppData/Local/Temp/msohtmlclip1/01/clip_image008.gif) **s**
+$$\begin{aligned}
+&x[n]=[1 \quad 0] s[n]\\
+&\mathbf{X} \quad \boldsymbol{h}^{T} \quad \mathbf{S}^{\leftarrow}
+\end{aligned}$$
 
 预测：
 
-![](file:///C:/Users/mynam/AppData/Local/Temp/msohtmlclip1/01/clip_image010.gif)
+$$\boldsymbol{s}[n | n-1]=A s[n-1 | n-1]+B u[n]$$
 
 最小预测MSE：
 
-![](file:///C:/Users/mynam/AppData/Local/Temp/msohtmlclip1/01/clip_image012.gif)
+$$\boldsymbol{M}[n | n-1]=\boldsymbol{A M}[n-1 | n-1] \boldsymbol{A}^{T}+\boldsymbol{B Q B}^{T}$$
 
 卡尔曼增益：
 
-![](file:///C:/Users/mynam/AppData/Local/Temp/msohtmlclip1/01/clip_image014.gif)
+$$\boldsymbol{K}[n]=\frac{\boldsymbol{M}[n | n-1] \boldsymbol{h}}{\sigma_{a}^{2}+\boldsymbol{h}^{T} \boldsymbol{M}[n | n-1] \boldsymbol{h}}$$
 
 修正：
 
-![](file:///C:/Users/mynam/AppData/Local/Temp/msohtmlclip1/01/clip_image016.gif)
+$$\boldsymbol{s}[n | n]=\boldsymbol{s}[n | n-1]+\boldsymbol{K}[n]\left(x[n]-\boldsymbol{h}^{T} \boldsymbol{s}[n | n-1]\right)$$
 
 最小MSE：
 
-![](file:///C:/Users/mynam/AppData/Local/Temp/msohtmlclip1/01/clip_image018.gif)
+$$\boldsymbol{M}[n | n]=\left(E-\boldsymbol{K}[n] \boldsymbol{h}^{T}\right) \boldsymbol{M}[n | n-1]$$
 
 其中
 
@@ -193,23 +208,28 @@ AD0引脚在模块内部下拉，地址默认0x68不用改。只连4个引脚即
 
 **1.** **PID调参**
 
-	mydata1[0]=GYRO_TO_DEG(gyrox);
-	mydata1[1]=PidInerRoll.out;
-	mydata1[2]=roll;
-	mydata1[3]=PidOuterRoll.out;
-	mydata1[4]=TIM3->CCR1;
-	mydata1[5]=TIM3->CCR2;
+```java
+mydata1[0]=GYRO_TO_DEG(gyrox);
+mydata1[1]=PidInerRoll.out;
+mydata1[2]=roll;
+mydata1[3]=PidOuterRoll.out;
+mydata1[4]=TIM3->CCR1;
+mydata1[5]=TIM3->CCR2;
+```
 
 **2.** **输出测试**
 
-	mydata1[0]=TIM3->CCR1;
-	mydata1[1]=TIM3->CCR2;
-	mydata1[2]=TIM3->CCR3;
-	mydata1[3]=TIM3->CCR4;
-	mydata1[4]=TIM4->CCR1;
-	mydata1[5]=TIM4->CCR2;
+```java
+mydata1[0]=TIM3->CCR1;
+mydata1[1]=TIM3->CCR2;
+mydata1[2]=TIM3->CCR3;
+mydata1[3]=TIM3->CCR4;
+mydata1[4]=TIM4->CCR1;
+mydata1[5]=TIM4->CCR2;
+```
 
 # 西电航协研发部Github组织库规范
+
 ## 一．命名规范
 
 1.库名中不得出现下述规定的字符- \ @ ! # $ % ^ & * () [] {} | \ ; : '' ’ ， 。 《 》 < > · ~ 。
